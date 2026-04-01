@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Sight California | Mobile Surveillance</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/Logo_no_bg.png" alt="Secure Sight California Logo" class="nav-logo">
+                Secure Sight California
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#action">In Action</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Secure Sight California</h1>
+            <p>Advanced Mobile Surveillance Solutions</p>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/cctv.png" alt="Shield Icon" />
+                    </div>
+                    <h3>Mobile Surveillance</h3>
+                    <p>State-of-the-art mobile surveillance trailers equipped with 3 high-definition camera heads for maximum coverage.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/agents.png" alt="Shield Icon" />
+                    </div>
+                    <h3>AI Detection & Human Monitoring</h3>
+                    <p>Advanced AI filters out false alarms, while real human monitoring teams verify threats and take immediate action.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="assets/shield.png" alt="Shield Icon" />
+                    </div>
+                    <h3>24/7 Access & Deterrence</h3>
+                    <p>Round-the-clock remote access to your feeds, featuring active deterrence tools like strobe lights and two-way audio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-gray">
+        <div class="container text-center">
+            <h2 class="section-title">About Secure Sight California</h2>
+            <p class="about-text">
+                Mobile surveillance is the modern standard for securing dynamic and temporary environments. Unlike traditional fixed cameras, our mobile units can be rapidly deployed and repositioned as your project evolves, offering unparalleled flexibility. They act as a highly visible deterrent to theft and vandalism, saving you thousands in potential losses and insurance claims. We proudly specialize in <strong>servicing construction developments</strong>, ensuring your site, materials, and equipment remain secure from groundbreaking to final inspection.
+            </p>
+        </div>
+    </section>
+
+    <section id="action" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Our Cameras in Action</h2>
+            <p class="intro-text">See exactly what our 3-head mobile units capture day and night. Below is real footage demonstrating our AI tracking and low-light capabilities.</p>
+            
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube-nocookie.com/embed/P8FXUKmKpr4?autoplay=1&mute=1&rel=0&loop=1&playlist=P8FXUKmKpr4" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                    <div class="video-wrapper">
+                        <iframe 
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube-nocookie.com/embed/mo9Q4iaHt5k?autoplay=1&mute=1&rel=0&loop=1&playlist=mo9Q4iaHt5k" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="section bg-dark text-white">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="text-center intro-text">Ready to secure your site? Fill out the form below and our team will get back to you promptly.</p>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            
+            <input type="hidden" name="access_key" value="57982d40-4064-43f2-87b9-daed4309a5ac">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000">
+            </div>
+
+            <div class="form-group">
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your site and surveillance needs..."></textarea>
+            </div>
+
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Secure Sight California, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

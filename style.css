@@ -1,0 +1,318 @@
+/* --- CSS Variables --- */
+:root {
+    --primary: #d97706; /* Construction/Security Orange */
+    --primary-hover: #b45309;
+    --dark: #1e293b;
+    --light: #ffffff;
+    --gray: #f8fafc;
+    --text-main: #334155;
+    --font: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.text-white { color: var(--light); }
+.bg-light { background-color: var(--light); }
+.bg-gray { background-color: var(--gray); }
+.bg-dark { background-color: var(--dark); }
+
+.section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--dark);
+}
+
+.bg-dark .section-title {
+    color: var(--light);
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+}
+
+/* --- Navigation --- */
+header {
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--light);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.7)), 
+                url('assets/ssc_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* --- Grid Layouts --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--light);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid var(--primary);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+/* --- About Section --- */
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* --- Videos Section --- */
+.video-grid {
+    display: grid;
+    /* This keeps videos side-by-side on desktop but stacks them on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-wrapper {
+    width: 100%;
+    /* Keep this! It forces the 16:9 shape */
+    padding-top: 56.25%; 
+    position: relative;
+    background: #000; /* Black background looks better while video loads */
+    border-radius: 12px; /* Slightly rounder for a modern tech feel */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Adds a nice depth */
+}
+
+/* Add this new rule to target the YouTube iframe specifically */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the default iframe border */
+}
+
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #475569;
+    border-radius: 4px;
+    background: #0f172a;
+    color: var(--light);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--light);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+/* --- Footer --- */
+footer {
+    background: #0f172a;
+    color: var(--light);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    /* Header & Navigation Fixes */
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap; /* Allows links to wrap to a second line if needed */
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Hero Adjustments */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Section & Spacing Adjustments */
+    .section {
+        padding: 3.5rem 0; /* Reduced padding prevents endless scrolling on mobile */
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Layout Adjustments */
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
